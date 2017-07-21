@@ -7,7 +7,7 @@ require 'matrix'
 # between 1 and 5 as 1,2,3,6,5 and a distance of 20
 station_map = Matrix[[0,7,9,0,0,14],[7,0,10,15,0,0],[9,10,0,11,0,2],[0,15,11,0,6,0],[0,0,0,6,0,9],[14,0,2,0,9,0]]
 
-tentative_distance = Array.new(station_map.row_count,1.0/0) # set all tentative distances to infinity
+tentative_distance = Array.new(station_map.row_count, nil) # set all tentative distances to nil
 unvisited_set = Array.new(station_map.row_count,1) # set all unvisited nodes to 1
 first_station = 1 # To make the program more useful we could pass these to the program
 last_station = 5  # but we will set them to 1 and 5 for testing
@@ -32,8 +32,11 @@ while unvisited_set[current_station] == 1 do
     station_map.row(current_station).each_with_index do |item, index|
         if item != 0
             tentative_distance[index] = tentative_distance[index] + item
-            # more work to do, need to sleep on this....
-            # 
+            if ((assigned_distance[index] > tenative_distance[index]) && (tenative_distance[index] != 0)) do
+                assigned_distance[index] = tenative_distance[index]
+            end
         end
     end
+    unvisited_set[current_station] = 0 # station has been visited
+    current_station = 
 end
