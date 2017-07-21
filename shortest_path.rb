@@ -38,5 +38,6 @@ while unvisited_set[current_station] == 1 do
         end
     end
     unvisited_set[current_station] = 0 # station has been visited
+    # Now assign current to smallest unvisited in assigned_distance
     current_station = 
 end
