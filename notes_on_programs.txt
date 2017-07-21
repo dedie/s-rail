@@ -1,0 +1,10 @@
+What's done and what has not:
+
+1/ Cucumber tests of API calls
+Wrote two Gherkin feature files to show I could do it, a basic test that it is a valid XML and another to show that the distance values are not negative. I am not sure how to do a ruby connection to Silverrail's test server and since I can't test it (don't have access) I just made a note in the env.rb file where I would have placed this.
+
+2/ The code for finding the third closest station works, hard coded the file name into the code but in a real system I would pass the file name and the station you want to find to the application (i.e fourth closest, 6th closest etc).
+Note: requires nokogiri for XML parsing.
+
+3/ Disappointed with this, started on it using Dijkstra's algorithm as I mentioned, hard coded the data in the form of a matrix with the current station as the rows, neighboring stations as the columns and distance as the values, the algorithm is on wikipedia so I won't repeat it here, unfortunatly I'm stumbling with my coding, not the code itself but how to go about it, my results are horribly complex , not finished and probably wrong.
+Will do this again myself as it is a very good learning practice and I obviously need more practice.
